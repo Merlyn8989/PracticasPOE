@@ -78,5 +78,10 @@ namespace DataAccessLayer.Repositories
                 command.ExecuteNonQuery();
             }
         }
-     }
+
+        public void DeleteCareer(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
