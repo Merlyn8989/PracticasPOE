@@ -36,8 +36,8 @@
             btnSave = new Button();
             btnEdit = new Button();
             btnDelete = new Button();
-            dtvCareers = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dtvCareers).BeginInit();
+            dgvCareers = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvCareers).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -93,6 +93,7 @@
             btnSave.TabIndex = 5;
             btnSave.Text = "Guardar";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnEdit
             // 
@@ -102,6 +103,7 @@
             btnEdit.TabIndex = 6;
             btnEdit.Text = "Editar";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnDelete
             // 
@@ -111,18 +113,19 @@
             btnDelete.TabIndex = 7;
             btnDelete.Text = "Eliminar";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // dtvCareers
+            // dgvCareers
             // 
-            dtvCareers.AllowUserToAddRows = false;
-            dtvCareers.AllowUserToDeleteRows = false;
-            dtvCareers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtvCareers.Location = new Point(394, 113);
-            dtvCareers.Name = "dtvCareers";
-            dtvCareers.ReadOnly = true;
-            dtvCareers.RowHeadersWidth = 51;
-            dtvCareers.Size = new Size(300, 188);
-            dtvCareers.TabIndex = 8;
+            dgvCareers.AllowUserToAddRows = false;
+            dgvCareers.AllowUserToDeleteRows = false;
+            dgvCareers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCareers.Location = new Point(394, 113);
+            dgvCareers.Name = "dgvCareers";
+            dgvCareers.ReadOnly = true;
+            dgvCareers.RowHeadersWidth = 51;
+            dgvCareers.Size = new Size(300, 188);
+            dgvCareers.TabIndex = 8;
             // 
             // CareerForm
             // 
@@ -130,7 +133,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(dtvCareers);
+            Controls.Add(dgvCareers);
             Controls.Add(btnDelete);
             Controls.Add(btnEdit);
             Controls.Add(btnSave);
@@ -141,7 +144,7 @@
             Controls.Add(label1);
             Name = "CareerForm";
             Text = "CareerForm";
-            ((System.ComponentModel.ISupportInitialize)dtvCareers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCareers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,6 +159,6 @@
         private Button btnSave;
         private Button btnEdit;
         private Button btnDelete;
-        private DataGridView dtvCareers;
+        private DataGridView dgvCareers;
     }
 }

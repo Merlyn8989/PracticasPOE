@@ -39,7 +39,7 @@ namespace DataAccessLayer.Repositories
         {
             using(var connection = _dbConnection.GetConnection())
             {
-                string query = "INSERT INTO career VALUES(@NameCareer, @DescriptionCareer";
+                string query = "INSERT INTO career VALUES(@NameCareer, @DescriptionCareer)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@NameCareer", career.nameCareer);
                 command.Parameters.AddWithValue("@DescriptionCareer", career.descriptionCareer);
@@ -59,7 +59,7 @@ namespace DataAccessLayer.Repositories
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@NameCareer", career.nameCareer);
                 command.Parameters.AddWithValue("@DescriptionCareer", career.descriptionCareer);
-                command.Parameters.AddWithValue("@Id", career.idCareer);
+                command.Parameters.AddWithValue("@IdCareer", career.idCareer);
                 connection.Open();
                 command.ExecuteNonQuery();
             }
@@ -79,9 +79,6 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public void DeleteCareer(int id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

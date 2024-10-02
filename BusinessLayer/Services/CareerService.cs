@@ -35,7 +35,7 @@ namespace BusinessLayer.Services
 
         public void DeleteCareer(int id)
         {
-            _careerRepository.DeleteCareer(id);
+            _careerRepository.Delete(id);
         }
        
 
